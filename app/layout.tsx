@@ -1,9 +1,6 @@
 import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
-import Image from 'next/image'
 import { FC, ReactNode } from 'react'
-
-import { Typography } from '@/components'
 
 import './globals.scss'
 
@@ -14,7 +11,7 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-	title: 'Quiz app'
+	title: 'Quiz app | step 1'
 }
 
 interface RootLayoutProps {

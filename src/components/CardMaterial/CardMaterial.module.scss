@@ -1,12 +1,12 @@
 .label {
-	@apply w-full max-w-[220px] cursor-pointer overflow-hidden rounded-[10px] border border-solid border-[#edeef4] bg-white;
+	@apply w-full  cursor-pointer overflow-hidden rounded-[10px] border border-solid border-[#edeef4] bg-white;
 }
 .image-wrap {
-	@apply relative z-10;
+	@apply relative z-10 h-[100px];
 }
 
 .image {
-	@apply overflow-hidden rounded-[10px] object-cover;
+	@apply absolute  left-0 top-0 h-full w-full overflow-hidden rounded-[10px] bg-cover;
 }
 
 .input {

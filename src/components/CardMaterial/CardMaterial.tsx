@@ -6,16 +6,18 @@ import styles from './CardMaterial.module.scss'
 
 interface CardMaterialProps {
 	id: string
-	src: string
+	src?: string
 	name: string
 	checked?: boolean
+	title: string
 }
 
 export const CardMaterial: FC<CardMaterialProps> = ({
 	id,
 	src,
 	name,
-	checked
+	checked,
+	title
 }) => {
 	return (
 		<label
@@ -25,7 +27,7 @@ export const CardMaterial: FC<CardMaterialProps> = ({
 			<div className={styles['image-wrap']}>
 				<Image
 					className={styles.image}
-					src={src}
+					src={src!}
 					alt=''
 					width={220}
 					height={100}
@@ -44,7 +46,7 @@ export const CardMaterial: FC<CardMaterialProps> = ({
 					tag='span'
 					className='text-[13px] font-normal'
 				>
-					Кирпич
+					{title}
 				</Typography>
 			</div>
 		</label>

@@ -8,7 +8,7 @@ export interface IData {
 export interface IItem {
 	id: string
 	name: string
-	src: string
+	src?: string
 }
 
 export interface IStepItem {
