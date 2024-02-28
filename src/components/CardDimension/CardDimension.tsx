@@ -1,13 +1,20 @@
-import { FC } from 'react'
+import cn from 'clsx'
+import type { FC } from 'react'
 
 import { TextField, Typography } from '@/components'
 
+import { IClassName } from '@/types/className.interface'
+
 import styles from './CardDimension.module.scss'
 
-export const CardDimension: FC = () => {
+interface CardDimensionProps extends IClassName {
+	title: string
+}
+
+export const CardDimension: FC<CardDimensionProps> = ({ className, title }) => {
 	return (
-		<div className={styles.card}>
-			<Typography className='mb-2 text-center'>Длина (м)</Typography>
+		<div className={cn(styles.card, className)}>
+			<Typography className='mb-2 text-center'>{title}</Typography>
 			<TextField placeholder='120' />
 		</div>
 	)

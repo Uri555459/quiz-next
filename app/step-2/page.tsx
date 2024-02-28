@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import {
 	Button,
 	CardDimension,
+	ContentWrapper,
 	GridList,
 	Sale,
 	StepList,
@@ -18,12 +19,17 @@ export const metadata: Metadata = {
 const Step2 = () => {
 	return (
 		<>
-			<div className='mr-[60px] flex w-full flex-col'>
+			<ContentWrapper>
 				<Typography className='mb-14 text-lg font-extrabold'>
 					{data.title}
 				</Typography>
 				<GridList>
-					<CardDimension />
+					{data.items.map(item => (
+						<CardDimension
+							key={item.id}
+							title={item.name}
+						/>
+					))}
 				</GridList>
 				<div className='mt-auto flex items-center'>
 					<Typography
@@ -35,7 +41,7 @@ const Step2 = () => {
 					<StepList data={data.stepItems} />
 					<Button>Далее</Button>
 				</div>
-			</div>
+			</ContentWrapper>
 			<Sale price={1000} />
 		</>
 	)

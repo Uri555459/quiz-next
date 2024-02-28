@@ -1,6 +1,7 @@
 import {
 	Button,
 	CardMaterial,
+	ContentWrapper,
 	GridList,
 	Sale,
 	StepList,
@@ -12,7 +13,7 @@ import { data } from '@/mock/step-1/step-1.data'
 export const Step1 = () => {
 	return (
 		<>
-			<div className='mr-[60px] flex w-full flex-col'>
+			<ContentWrapper>
 				<Typography className='mb-5 text-lg font-extrabold'>
 					{data.title}
 				</Typography>
@@ -37,7 +38,7 @@ export const Step1 = () => {
 					<StepList data={data.stepItems} />
 					<Button href='/step-2'>Далее</Button>
 				</div>
-			</div>
+			</ContentWrapper>
 			<Sale price={500} />
 		</>
 	)

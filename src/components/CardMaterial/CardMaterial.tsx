@@ -8,7 +8,6 @@ interface CardMaterialProps {
 	id: string
 	src?: string
 	name: string
-	checked?: boolean
 	title: string
 }
 
@@ -16,7 +15,6 @@ export const CardMaterial: FC<CardMaterialProps> = ({
 	id,
 	src,
 	name,
-	checked,
 	title
 }) => {
 	return (
@@ -38,7 +36,6 @@ export const CardMaterial: FC<CardMaterialProps> = ({
 				className={styles.input}
 				type='radio'
 				id={id}
-				checked={checked}
 			/>
 			<div className={styles.bottom}>
 				<span className={styles.span}></span>
