@@ -1,6 +1,13 @@
 import { Metadata } from 'next'
 
-import { Button, Sale, StepBadge, StepList, Typography } from '@/components'
+import {
+	Button,
+	CardDimension,
+	GridList,
+	Sale,
+	StepList,
+	Typography
+} from '@/components'
 
 import { data } from '@/mock/step-2/step-2.data'
 
@@ -11,12 +18,14 @@ export const metadata: Metadata = {
 const Step2 = () => {
 	return (
 		<>
-			<div>
-				<Typography className='mb-5 text-lg font-extrabold'>
+			<div className='mr-[60px] flex w-full flex-col'>
+				<Typography className='mb-14 text-lg font-extrabold'>
 					{data.title}
 				</Typography>
-				<div className='grid grid-cols-3 gap-5'></div>
-				<div className='mt-5 flex items-center'>
+				<GridList>
+					<CardDimension />
+				</GridList>
+				<div className='mt-auto flex items-center'>
 					<Typography
 						tag='span'
 						className='mr-[14px] text-[14px] font-normal'

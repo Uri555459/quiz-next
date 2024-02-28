@@ -9,7 +9,7 @@ interface SaleProps {
 
 export const Sale: FC<SaleProps> = ({ price }) => {
 	return (
-		<div className='relative'>
+		<div className='relative shrink-0'>
 			<Image
 				className='object-cover'
 				width={360}
