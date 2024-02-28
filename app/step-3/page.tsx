@@ -1,5 +1,3 @@
-import { Metadata } from 'next'
-
 import {
 	Button,
 	CardDimension,
@@ -7,30 +5,31 @@ import {
 	GridList,
 	Sale,
 	StepList,
+	TextField,
 	Typography
 } from '@/components'
 
-import { data } from '@/mock/step-2/step-2.data'
+import { data } from '@/mock/step-3/step-3.data'
 
-export const metadata: Metadata = {
-	title: 'Quiz app | step 2'
-}
-
-const Step2 = () => {
+const Step3 = () => {
 	return (
 		<>
 			<ContentWrapper>
 				<Typography className='mb-14 text-lg font-extrabold'>
 					{data.title}
 				</Typography>
-				<GridList>
-					{data.items.map(item => (
-						<CardDimension
-							key={item.id}
-							title={item.name}
-						/>
-					))}
-				</GridList>
+				<div className='flex h-full max-h-[220px] flex-col items-center justify-center rounded-[10px] bg-white'>
+					<Typography
+						className='mb-[10px]'
+						tag='p'
+					>
+						{data.items[0].name}
+					</Typography>
+					<TextField
+						className='mx-auto max-w-60'
+						placeholder='35'
+					/>
+				</div>
 				<div className='mt-auto flex items-center'>
 					<Typography
 						tag='span'
@@ -39,12 +38,12 @@ const Step2 = () => {
 						Вопрос {data.step.current} из {data.step.all}
 					</Typography>
 					<StepList data={data.stepItems} />
-					<Button href={data.link}>Далее</Button>
+					<Button>Далее</Button>
 				</div>
 			</ContentWrapper>
-			<Sale price={1000} />
+			<Sale price={2500} />
 		</>
 	)
 }
 
-export default Step2
+export default Step3

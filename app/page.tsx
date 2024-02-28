@@ -36,7 +36,7 @@ export const Step1 = () => {
 						Вопрос {data.step.current} из {data.step.all}
 					</Typography>
 					<StepList data={data.stepItems} />
-					<Button href='/step-2'>Далее</Button>
+					<Button href={data.link}>Далее</Button>
 				</div>
 			</ContentWrapper>
 			<Sale price={500} />

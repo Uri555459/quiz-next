@@ -3,6 +3,7 @@ export interface IData {
 	items: IItem[]
 	stepItems: IStepItem[]
 	step: IStep
+	link?: string
 }
 
 export interface IItem {

@@ -2,6 +2,7 @@ import { IData } from '@/mock/data.interface'
 
 export const data: IData = {
 	title: 'Какой основной материал объекта:',
+	link:'/step-2',
 	items: [
 		{
 			id: '1',
