@@ -1,0 +1,37 @@
+.label {
+	@apply w-full max-w-[220px] cursor-pointer overflow-hidden rounded-[10px] border border-solid border-[#edeef4] bg-white;
+}
+.image-wrap {
+	@apply relative z-10;
+}
+
+.image {
+	@apply overflow-hidden rounded-[10px] object-cover;
+}
+
+.input {
+	@apply absolute left-0 top-0 h-0 w-0;
+	&:checked + .bottom {
+		@apply bg-[#6ccd5c];
+		box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+	}
+
+	&:checked + .bottom > .span {
+		@apply bg-[#45ab35];
+
+		&::before {
+			@apply block;
+		}
+	}
+}
+.bottom {
+	@apply -mt-3 flex items-center p-[10px] pt-5;
+}
+
+.span {
+	@apply relative mr-2 block h-[18px] w-[18px] rounded-full bg-[#edeef4] before:absolute before:left-1 before:top-0 before:hidden before:h-[13px] before:w-[17px] before:bg-cover before:bg-center before:bg-no-repeat;
+
+	&:before {
+		background-image: url('/check-white.svg');
+	}
+}

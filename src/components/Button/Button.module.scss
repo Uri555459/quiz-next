@@ -1,0 +1,4 @@
+.button {
+	@apply ml-auto flex min-w-[220px] cursor-pointer items-center justify-center gap-3 rounded-[100px] border-none p-[18px] text-base font-bold text-white;
+	background: linear-gradient(180deg, #ffc700 0%, #f90 100%);
+}
