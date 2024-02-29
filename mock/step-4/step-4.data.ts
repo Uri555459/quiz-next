@@ -1,12 +1,16 @@
 import { IData } from '@/mock/data.interface'
 
 export const data: IData = {
-	title: 'Какая толщина стен у Вас?',
-	link: '/step-4',
+	title: 'Требуется ли вывозить мусор:',
+	link: '/step-5',
 	items: [
 		{
 			id: '1',
-			name: 'Толщина стен (см)'
+			name: 'Да, требуется'
+		},
+		{
+			id: '2',
+			name: 'Нет, не требуется'
 		}
 	],
 	stepItems: [
@@ -24,7 +28,7 @@ export const data: IData = {
 		},
 		{
 			id: '4',
-			isActive: false
+			isActive: true
 		},
 		{
 			id: '5',
@@ -33,6 +37,6 @@ export const data: IData = {
 	],
 	step: {
 		all: 5,
-		current: 3
+		current: 4
 	}
 }

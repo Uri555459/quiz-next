@@ -5,7 +5,7 @@ import type { FC } from 'react'
 import styles from './CardMaterial.module.scss'
 
 interface CardMaterialProps {
-	id: string
+	id?: string
 	src?: string
 	name: string
 	title: string
@@ -25,7 +25,7 @@ export const CardMaterial: FC<CardMaterialProps> = ({
 			<div className={styles['image-wrap']}>
 				<Image
 					className={styles.image}
-					src={src!}
+					src={src || ''}
 					alt=''
 					width={220}
 					height={100}

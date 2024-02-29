@@ -2,38 +2,44 @@ import { Metadata } from 'next'
 
 import {
 	Button,
+	CardDimension,
+	CardTrash,
 	ContentWrapper,
+	ControlField,
+	GridList,
 	Sale,
 	StepList,
-	TextField,
 	Typography
 } from '@/components'
 
-import { data } from '@/mock/step-3/step-3.data'
+import { data } from '@/mock/step-4/step-4.data'
 
 export const metadata: Metadata = {
-	title: 'Quiz app | step 3'
+	title: 'Quiz app | step 4'
 }
 
-const Step3 = () => {
+const Step4 = () => {
 	return (
 		<>
 			<ContentWrapper>
 				<Typography className='mb-14 text-lg font-extrabold'>
 					{data.title}
 				</Typography>
-				<div className='flex h-full max-h-[220px] flex-col items-center justify-center rounded-[10px] bg-white'>
-					<Typography
-						className='mb-[10px]'
-						tag='p'
-					>
-						{data.items[0].name}
-					</Typography>
-					<TextField
-						className='mx-auto max-w-60'
-						placeholder='35'
-					/>
-				</div>
+				<GridList className='!grid-cols-2'>
+					{data.items.map(item => (
+						<CardTrash
+							key={item.id}
+							id={item.id}
+						>
+							<ControlField
+								name='control'
+								id={item.id}
+								variant='big'
+							/>
+							<Typography tag='span'>{item.name}</Typography>
+						</CardTrash>
+					))}
+				</GridList>
 				<div className='mt-auto flex items-center'>
 					<Typography
 						tag='span'
@@ -45,9 +51,9 @@ const Step3 = () => {
 					<Button href={data.link}>Далее</Button>
 				</div>
 			</ContentWrapper>
-			<Sale price={2500} />
+			<Sale price={1000} />
 		</>
 	)
 }
 
-export default Step3
+export default Step4

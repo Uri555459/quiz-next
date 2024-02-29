@@ -23,6 +23,10 @@
 			@apply block;
 		}
 	}
+
+	&:checked + .bottom > .span + span {
+		@apply text-white;
+	}
 }
 .bottom {
 	@apply -mt-3 flex items-center p-[10px] pt-5;

@@ -1,0 +1,22 @@
+.label {
+	@apply w-max cursor-pointer overflow-hidden;
+}
+
+.input {
+	@apply absolute left-0 top-0 h-0 w-0;
+	&:checked + .span {
+		@apply bg-[#6ccd5c];
+
+		&::before {
+			@apply block;
+		}
+	}
+}
+
+.span {
+	@apply relative block rounded-full bg-[#edeef4] before:absolute before:hidden  before:bg-cover before:bg-center before:bg-no-repeat;
+
+	&:before {
+		background-image: url('/check-white.svg');
+	}
+}
